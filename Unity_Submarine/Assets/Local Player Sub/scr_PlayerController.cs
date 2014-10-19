@@ -28,9 +28,9 @@ public class scr_PlayerController : scr_Craft {
 	//}
 	
 	// Update is called once per frame
-	//void Update () {
-	//
-	//}
+	void Update () {
+		CommonUpdate();
+	}
 
 	public void SetNavCoordinates (Vector2 coord2D) {
 		targetPosition = new Vector3(coord2D.x, coord2D.y, transform.position.z);

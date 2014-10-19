@@ -27,9 +27,6 @@ public class scr_Craft : MonoBehaviour {
 
 	void FixedUpdate() {
 
-		// This alternates between true and false. I don't know why.
-		//Debug.Log("enginesAreActive == " + enginesAreActive);
-
 		if (enginesAreActive) {
 			// Apply forward force to the craft.
 			rigidbody.AddForce(transform.forward * (maxEnginePower * currentEnginePower));
@@ -37,12 +34,16 @@ public class scr_Craft : MonoBehaviour {
 	}
 
 	void Update () {
+		CommonUpdate();
+	}
+
+	protected void CommonUpdate () {
 
 		// Debug
 		if (showVelocity) {
 			Debug.Log("Craft Velocity = " + rigidbody.velocity.magnitude);
 		}
-
+		
 		if (hasTarget) {
 			// Draw a line to the target.
 			Debug.DrawLine(transform.position, targetPosition, Color.white);
