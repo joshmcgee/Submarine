@@ -22,15 +22,15 @@ public class scr_PlayerController : scr_Craft {
 		//destinationCrosshair = newCrosshair;
 	}
 
-	void FixedUpdate() {
+	//void FixedUpdate() {
 		//rigidbody.AddForce(transform.forward * 4000 * Time.deltaTime);
 		//Debug.Log("Sub velocity = " + rigidbody.velocity);
-	}
+	//}
 	
 	// Update is called once per frame
-	void Update () {
-
-	}
+	//void Update () {
+	//
+	//}
 
 	public void SetNavCoordinates (Vector2 coord2D) {
 		targetPosition = new Vector3(coord2D.x, coord2D.y, transform.position.z);

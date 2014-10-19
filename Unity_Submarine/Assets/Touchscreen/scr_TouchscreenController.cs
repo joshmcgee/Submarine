@@ -52,20 +52,25 @@ public class scr_TouchscreenController : MonoBehaviour {
 
 			// Dragged vertical.
 			if (Mathf.Abs(mouseUpPosition.x - mouseDownPosition.x) < (dragDistance/3)) {
+				// Up
 				if (mouseUpPosition.y - mouseDownPosition.y > 0.0f) {
 					Debug.Log("Fire Torpedoes!");
 				}
+				// Down
 				else {
 					Debug.Log("Ping!");
 				}
 			}
 			// Dragged horizontal.
 			else if (Mathf.Abs(mouseUpPosition.y - mouseDownPosition.y) < (dragDistance/3)) {
+				// Right
 				if (mouseUpPosition.x - mouseDownPosition.x > 0.0f) {
 					Debug.Log("Dragged Right!");
 				}
+				// Left
 				else {
 					Debug.Log("Shutdown Engines!");
+					playerController.CutEngines();
 				}
 			}
 		}
